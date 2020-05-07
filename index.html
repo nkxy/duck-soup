@@ -7,37 +7,33 @@
 
     <title>Nick Yang</title>
     <meta name="description" content="My personal website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="author" content="Nick Yang">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-        body {
-            background-color: whitesmoke;
-            font-family: 'Open Sans', sans-serif;
-            color: #3A3A3A;
-        }
-        
-        h1 {
-            font-family: 'Lora', serif;
-            font-weight: 700;
-        }
-        
-        button {
-            background-color: transparent;
-            border-radius: 0;
-            border: 2px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 
 <body>
-    <h1>Nick Yang</h1>
-    <p>HELLO my name is Nick</p>
-    <span class="but">
-        <button>Click me!</button>
-    </span>
-
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="sh-font">Work</a>
+        <a href="about.html" class="sh-font">About</a>
+        <a href="resume.pdf" class="sh-font">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="hamburger_icon.svg">
+        </a>
+    </div>
 </body>
 
 </html>
