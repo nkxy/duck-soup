@@ -16,6 +16,10 @@ h2 {
     font-weight: 700;
 }
 
+.body-style {
+    min-width: 400px;
+}
+
 .sh-font {
     font-size: 18px;
     font-family: 'Lora', serif;
@@ -191,6 +195,7 @@ h2 {
 
 .work-spacing {
     width: 80%;
+    max-width: 1800px;
     margin-right: -48px;
 }
 
@@ -208,5 +213,8 @@ h2 {
     .responsive-gutter {
         margin-left: 32px;
         margin-right: 32px;
+    }
+    .work-title {
+        text-align: center;
     }
 }
