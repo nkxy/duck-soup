@@ -1,3 +1,36 @@
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(8deg);
+    }
+    45% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     background-color: w#ffffff;
     font-family: 'Open Sans', sans-serif;
@@ -53,7 +86,7 @@ h2 {
 
 /* Style the links inside the navigation bar */
 
-.topnav a {
+.topnav a.nav-link {
     float: right;
     display: block;
     color: #595959;
@@ -66,10 +99,15 @@ h2 {
     text-decoration: none;
 }
 
+.home-link {
+    color: #3A3A3A;
+    text-decoration: none;
+}
+
 
 /* Change the color of links on hover */
 
-.topnav a:hover {
+.topnav a:hover.nav-link {
     color: #3A3A3A;
 }
 
@@ -95,7 +133,7 @@ h2 {
     .header-title {
         display: none;
     }
-    .topnav a {
+    .topnav a.nav-link {
         display: none;
         margin: 32px;
         padding: 0px;
@@ -130,7 +168,7 @@ h2 {
         float: left;
         position: absolute;
     }
-    .topnav.responsive a {
+    .topnav.responsive a.nav-link {
         float: none;
         display: block;
         text-align: center;
@@ -146,11 +184,31 @@ h2 {
     padding-top: 48px;
 }
 
+
+/* TAGLINE */
+
 .tagline {
     width: 60%;
     display: flex;
     justify-content: center;
     height: auto;
+}
+
+.tagline-bubble {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-right: 24px;
+    display: inline-block;
+    animation: wiggle 2.5s 1;
+}
+
+.tagline-text {
+    vertical-align: top;
+    display: inline;
+    min-width: 200px;
+    max-width: 500px;
+    animation: fadein 2.5s 1;
 }
 
 @media screen and (max-width: 700px) {
@@ -161,21 +219,11 @@ h2 {
     }
     .tagline-bubble {
         margin-right: 16px;
+        animation: none;
     }
-}
-
-.tagline-bubble {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-right: 24px;
-}
-
-.tagline-text {
-    vertical-align: top;
-    display: inline;
-    min-width: 200px;
-    max-width: 500px;
+    .tagline-text {
+        animation: none;
+    }
 }
 
 .body-spacing-120 {
@@ -207,6 +255,7 @@ h2 {
     width: 80%;
     max-width: 1800px;
     margin-right: -48px;
+    animation: fadein 5s 1;
 }
 
 .about-gutter {
@@ -218,6 +267,7 @@ h2 {
     .work-spacing {
         width: 100%;
         margin-right: 0px;
+        animation: none;
     }
     .work-thumbnail {
         margin-right: 0px;
