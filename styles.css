@@ -58,7 +58,7 @@ h2 {
 }
 
 .body-style {
-    min-width: 400px;
+    min-width: 370px;
     margin: 0px;
 }
 
@@ -277,17 +277,21 @@ h2 {
     }
     .work-thumbnail {
         margin-right: 0px;
+        padding: 16px;
     }
     .work-gallery {
         justify-content: center;
     }
     .responsive-gutter {
-        margin-left: 32px;
-        margin-right: 32px;
+        margin-left: 16px;
+        margin-right: 16px;
     }
     .page-title {
         text-align: center;
         margin-top: 48px;
+    }
+    .about-gutter {
+        width: 100%;
     }
 }
 
