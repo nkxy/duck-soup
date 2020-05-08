@@ -1,0 +1,7 @@
+AuthUserFile /TODO
+AuthName "Case Studies"
+AuthType Basic
+
+<Files "field-restrictions.html">
+  Require valid-user
+</Files>
