@@ -226,8 +226,14 @@ h2 {
     }
 }
 
-.body-spacing-120 {
-    padding-top: 120px;
+.body-spacing-100-48 {
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 700px) {
+    .body-spacing-100-48 {
+        padding-top: 48px;
+    }
 }
 
 .work-gallery {
