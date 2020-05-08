@@ -459,5 +459,10 @@ h2 {
 }
 
 .footer {
-    height: 150px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: 'Open Sans', sans-serif;
+    color: #595959;
+    text-align: center;
+    font-size: 12px;
 }
