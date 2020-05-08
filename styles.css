@@ -277,7 +277,7 @@ h2 {
     }
     .work-thumbnail {
         margin-right: 0px;
-        padding: 16px;
+        padding: px;
     }
     .work-gallery {
         justify-content: center;
@@ -296,20 +296,148 @@ h2 {
 }
 
 .about-banner {
-    height: 288px;
-    width: auto;
-    background-image: url(aboutBanner.svg);
+    height: 240px;
+    width: 100%;
     object-fit: cover;
     background-repeat: repeat-x;
+    position: absolute;
+}
+
+@keyframes f0 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f1 {
+    10% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f3 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f4 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f5 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.abg1 {
+    background-image: url(banner1.svg);
+    animation: f0 1s 1;
+}
+
+.abg2 {
+    background-image: url(banner2.svg);
+    animation: f5 1s 1;
+}
+
+.abg3 {
+    background-image: url(banner3.svg);
+    animation: f2 1s 1;
+}
+
+.abg4 {
+    background-image: url(banner4.svg);
+    animation: f3 1s 1;
+}
+
+.abg5 {
+    background-image: url(banner5.svg);
+    animation: f4 1s 1;
+}
+
+.abg6 {
+    background-image: url(banner6.svg);
+    animation: f1 1s 1;
 }
 
 .about-body {
     display: flex;
     justify-content: center;
+    margin-top: 240px;
+}
+
+.about-banner-container {
+    position: relative;
+}
+
+.about-banner-mobile {
+    display: none;
 }
 
 @media screen and (max-width: 700px) {
+    .about-body {
+        margin-top: 0px;
+    }
     .about-banner {
+        display: none;
+    }
+    .about-banner-mobile {
+        display: block;
+        object-fit: cover;
         background-repeat: no-repeat;
         background-image: url(aboutBannerMobile.svg);
         height: 312px;
