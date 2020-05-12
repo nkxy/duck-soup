@@ -243,7 +243,7 @@ h2 {
 }
 
 .work-thumbnail {
-    max-width: 100%;
+    width: 245px;
     height: auto;
     object-fit: contain;
     padding: 32px;
@@ -259,7 +259,7 @@ h2 {
 
 .work-spacing {
     width: 90%;
-    max-width: 1800px;
+    max-width: 738px;
     margin-right: -48px;
     animation: fadein 5s 1;
 }
