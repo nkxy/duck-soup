@@ -1,21 +1,27 @@
-@keyframes wiggle {
+@keyframes header {
     0% {
-        transform: rotate(0deg);
+        transform: translate(100%) rotate(0deg);
+    }
+    10% {
+        transform: translate(100%) rotate(0deg);
+    }
+    15% {
+        transform: translate(100%) rotate(8deg);
+    }
+    25% {
+        transform: translate(100%) rotate(-8deg);
     }
     30% {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translate(100%);
     }
-    35% {
-        transform: rotate(8deg);
+    40% {
+        transform: translate(100%) rotate(0deg);
     }
-    45% {
-        transform: rotate(-8deg);
-    }
-    50% {
-        transform: rotate(0deg);
+    90% {
+        transform: rotate(0deg) translate(0%);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(0deg) translate(0%);
     }
 }
 
@@ -27,6 +33,29 @@
         opacity: 0;
     }
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translate(20px);
+    }
+    50% {
+        transform: translate(20px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes fade-slide {
+    0% {
+        transform: translate(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px);
         opacity: 1;
     }
 }
@@ -73,9 +102,6 @@ h2 {
     margin-left: 32px;
     vertical-align: top;
 }
-
-
-/* Add a black background color to the top navigation */
 
 .topnav {
     overflow: hidden;
@@ -135,7 +161,7 @@ h2 {
     }
     .topnav a.nav-link {
         display: none;
-        margin: 32px;
+        margin: 40px;
         padding: 0px;
     }
     .topnav a.icon {
@@ -191,16 +217,17 @@ h2 {
     width: 60%;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: auto;
 }
 
 .tagline-bubble {
-    max-width: 100%;
-    height: auto;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
     margin-right: 24px;
     display: inline-block;
-    animation: wiggle 2.5s 1;
+    animation: header 2.5s 1;
 }
 
 .tagline-text {
@@ -208,7 +235,7 @@ h2 {
     display: inline;
     font-size: 24px;
     min-width: 200px;
-    max-width: 500px;
+    max-width: 700px;
     animation: fadein 2.5s 1;
 }
 
@@ -217,13 +244,19 @@ h2 {
         width: 100%;
         margin-left: 24px;
         margin-right: 24px;
+        flex-wrap: wrap;
     }
     .tagline-bubble {
+        width: 65px;
+        height: 65px;
         margin-right: 16px;
         animation: none;
+        margin-bottom: 16px;
     }
     .tagline-text {
         animation: none;
+        font-size: 18px;
+        text-align: center;
     }
 }
 
@@ -258,6 +291,14 @@ h2 {
     margin-top: 80px;
 }
 
+.slide-left {
+    animation: slide-left 5s 1;
+}
+
+.fade-slide {
+    animation: fade-slide 2s 1;
+}
+
 .work-spacing {
     width: 90%;
     max-width: 738px;
@@ -274,6 +315,12 @@ h2 {
     .work-spacing {
         width: 100%;
         margin-right: 0px;
+        animation: none;
+    }
+    .slide-left {
+        animation: none;
+    }
+    .fade-slide {
         animation: none;
     }
     .work-thumbnail {
