@@ -41,11 +41,10 @@
                 <p><b>Responsibilities:</b> Interaction design, visual design, prototyping, usability testing, development handoff </p>
             </div>
             <h2 class="m-16">The challenge</h2>
-            <p class="m-32">Veeva is a software company that focuses on life sciences and pharmaceutical applications. OpenData is Veeva's database that customers can purchase access to. It contains data about health care providers and organizations, that pharmaceutical
-                companies might be interested in.
-                <br><br> Currently, once a customer has been given access to OpenData they can see all of the data inside of the database. However, OpenData now wants the ability to make certain data fields premium, so that only specific customers who
-                have bought those fields can access them.
-                <br><br> OpenData Admins use Veeva Network, a data management tool, to configure OpenData. The goal is to create a feature that allows OpenData admins to set up and configure these premium fields inside Network for OpenData users.
+            <p class="m-32">Veeva is a software company that focuses on pharmaceutical applications. OpenData is Veeva's database on health care providers and organizations, that pharmaceutical companies can purchase access to.
+                <br><br> OpenData now would like to introduce premium data fields, which is additional data that customers can pay access to. As a data product, OpenData wants to be able to provide more data options for its customers.
+                <br><br> OpenData Admins use Veeva Network, a data management tool, to configure OpenData. Network is a large, complex product used for various applications besides OpenData. The goal is to enable OpenData admins to set up and configure
+                these premium fields inside Network for OpenData users.
             </p>
             <div class="quote-container">
                 <div class="quote">
@@ -57,7 +56,23 @@
                     </div>
                 </div>
             </div>
+            <h2 class="m-16">Highlights</h2>
+            <ul class="m-32">
+                <li>Early usability tests revealed fundamental user experience issues, leading to a more intuitive final design.</li>
+                <li>Delivered visual designs that balanced clarity with simplicity.</li>
+                <li>Created new types of design handoff documents for faster and more accurate development. </li>
+            </ul>
+            <h2 class="m-16">Where should field restrictions go?</h2>
+            <p class="m-16">I first explored allowing OpenData Admins to specify certain fields as being restricted for specific users. There were many possible places in Network that we could build this feature into, all with different constraints. To explore further,
+                I created sketches to quickly get my ideas down and discuss with the team.</p>
             <img src="FieldRestrictionAssets/DVP_Sketch.png" class="full-width-image">
+            <p class="m-32"> The Data Visibility Profile (DVP) is assigned to a specific user, and contains country-specific information around permissions and layout. <br><br> Field restrictions are also country-specific, so combining the two could work. But this also
+                reduces flexibility for the OpenData admin, since a new DVP needs to be made for every new field restriction, which could become very cumbersome.</p>
+            <img src="FieldRestrictionAssets/Inside_User_profile_sketch.png" class="full-width-image m-16">
+            <p class="m-32"> To solve the flexibility issue, I tried putting the field restrictions next to where the DVP is assigned in the User Profile. However, OpenData admins would have to go configure each field one by one for each user, which is quite tedious.</p>
+            <img src="FieldRestrictionAssets/Seperate_section_sketch.png" class="full-width-image m-16">
+            <p class="m-16"> Here OpenData admins would go to a new side tab, where they would be able to create a field restriction group. This would have a group of users, along with which fields are restricted for them. <br><br> This approach would be more flexible,
+                as it would allow configuration of multiple fields for multiple users. However, this feature would be hidden underneath the Users tab, which could be hard to find.</p>
 
         </div>
     </div>
