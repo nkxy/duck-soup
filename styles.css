@@ -73,7 +73,7 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Lora', serif;
     font-weight: 700;
 }
@@ -308,7 +308,7 @@ h2 {
 
 .about-gutter {
     width: 80%;
-    max-width: 1400px;
+    max-width: 900px;
 }
 
 @media screen and (max-width: 700px) {
@@ -476,6 +476,20 @@ h2 {
     display: none;
 }
 
+.about-two-col {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-photo {
+    width: 35%;
+    margin-left: 96px;
+}
+
+.no-top-margin {
+    margin-top: 0px;
+}
+
 @media screen and (max-width: 700px) {
     .about-body {
         margin-top: 0px;
@@ -494,6 +508,15 @@ h2 {
     .about-banner-container {
         display: flex;
         justify-content: center;
+    }
+    .about-photo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .about-two-col {
+        display: block;
     }
 }
 
